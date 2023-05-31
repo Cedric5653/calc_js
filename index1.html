@@ -15,6 +15,10 @@
                 <hr>
                 <span>Science</span>
             </div>
+            <div>
+                <input type="text" class="heure" value="33">
+            </div>
+
             <form action="">
                 <div class="display">
                     <input type="text" name="display" >
@@ -59,5 +63,24 @@
 
         </div>
     </div>
+
+    <script>
+        var heurElement = document.getElementsByClassName("heure")[0];
+        
+
+
+        var date = new Date();
+
+        var heures = date.getHours();
+        var minutes = date.getMinutes();
+
+        var heureFormat = ("0" + heures).slice(-2);
+        var minutesFormats = ("0" + minutes).slice(-2);
+
+        heurElement.value = heureFormat + ":" + minutesFormats;
+        
+
+    </script>
+
 </body>
 </html>
